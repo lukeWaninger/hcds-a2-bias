@@ -36,6 +36,8 @@ The following Python packages were used and their documentation can be found at 
 
 ## Files Created
 This notebook creates 1 CSV file of data extracted and compiled as part of this analysis.
+
+### Provenance
 _[See the graph](https://www.synapse.org/#!Synapse:syn17015603)_
 ![Provenance Graph](https://github.com/lukeWaninger/DATA512_A2/blob/master/provenance.png)
 

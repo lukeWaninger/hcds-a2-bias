@@ -39,6 +39,7 @@ This notebook creates 1 CSV file of data extracted and compiled as part of this 
 
 ### Provenance
 _[See the graph](https://www.synapse.org/#!Synapse:syn17015603)_
+
 ![Provenance Graph](https://github.com/lukeWaninger/DATA512_A2/blob/master/provenance.png)
 
 | name | datatype | descriptions |

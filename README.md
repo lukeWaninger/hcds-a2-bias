@@ -1,5 +1,6 @@
 # Bias in Data
 Name: Luke Waninger
+
 Date: 24 October 2016
 
 ## Goal

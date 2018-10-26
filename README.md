@@ -11,7 +11,7 @@ In the analysis portion of the notebook I will show two major items:
 [HCDE Fall 2018 - A2](https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)/Assignments#A2:_Bias_in_data)
 
 ## Data sources used
-To create these tables, we will draw from three data sources:
+To create these tables, we will draw from two data sources:
 1. Wikipedia Article Data found on [Figshare](https://figshare.com/articles/Untitled_Item/5513449).
 
 | field   | data type | description                    |
@@ -27,16 +27,6 @@ To create these tables, we will draw from three data sources:
 |--------------------------------|-----------|---------------------------------------------|
 | Geography                      | str       | full country name                           |
 | Population mid-2018 (millions) | str       | population in millions recorded in mid-2018 |
-
-3. The Objective Revision Evaluation Service ([ORES](https://www.mediawiki.org/wiki/ORES)) will be used to estimate the quality of each article drawn from source 1 above. Data will be gathered from this source through formed API requests in the notebook. ORES will return an estimated article quality and probabilities for six different rankings.
-
-1. FA - Featured article
-2. GA - Good article
-3. B - B-class article
-4. C - C-class article
-5. Start - Start-class article
-6. Stub - Stub-class article
-You may also notice two additional categories not to be confused with the six designated above. They are error results from the ORES API and may be either 'Text Deleted' or 'Revision not Found'.
 
 ## Resources used
 This analysis was prepared using Python 3.7 running in a Conda environment. The environment dependencies can be installed via `pip install -r requirements.txt`.
@@ -55,6 +45,17 @@ The following Python packages were used and their documentation can be found at 
 * [`plotly`](https://plot.ly/python/)
 * [`synapse`](https://python-docs.synapse.org//)
 * [`zipfile`](https://docs.python.org/2/library/zipfile.html)
+
+### The Objective Revision Evaluation Service ([ORES](https://www.mediawiki.org/wiki/ORES)) 
+This API will be used to estimate the quality of each article drawn from source 1 above. Data will be gathered from this source through formed API requests in the notebook. ORES will return an estimated article quality and probabilities for six different rankings.
+
+1. FA - Featured article
+2. GA - Good article
+3. B - B-class article
+4. C - C-class article
+5. Start - Start-class article
+6. Stub - Stub-class article
+You may also notice two additional categories not to be confused with the six designated above. They are error results from the ORES API and may be either 'Text Deleted' or 'Revision not Found'.
 
 ## Files Created
 This notebook creates 1 CSV file of data extracted and compiled as part of this analysis.

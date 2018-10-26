@@ -48,13 +48,13 @@ The following Python packages were used and their documentation can be found at 
 
 ### The Objective Revision Evaluation Service ([ORES](https://www.mediawiki.org/wiki/ORES)) 
 This API will be used to estimate the quality of each article drawn from source 1 above. Data will be gathered from this source through formed API requests in the notebook. ORES will return an estimated article quality and probabilities for six different rankings.
-
 1. FA - Featured article
 2. GA - Good article
 3. B - B-class article
 4. C - C-class article
 5. Start - Start-class article
 6. Stub - Stub-class article
+
 You may also notice two additional categories not to be confused with the six designated above. They are error results from the ORES API and may be either 'Text Deleted' or 'Revision not Found'.
 
 ## Files Created

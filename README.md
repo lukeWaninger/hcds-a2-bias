@@ -26,8 +26,10 @@ To create the tables and visualizations we will draw from two datasources:
 | Population mid-2018 (millions) | str       | population in millions recorded in mid-2018 |
 
 ## Resources used
-This analysis was prepared using Python 3.7 running in a Conda environment. The environment dependencies can be installed via `pip install -r requirements.txt`.
+The environment dependencies can be installed via `pip install -r requirements.txt`. I recommend installing in a Conda environment running Python version 3.7.
+
 Documentation for Python can be found here: https://docs.python.org/3.7/  
+
 Documentation for Jupyter Notebook can be found here: http://jupyter-notebook.readthedocs.io/en/latest/  
 
 The following Python packages were used and their documentation can be found at the accompanying links:
@@ -103,8 +105,6 @@ And the ten with the least.
 | Indonesia    | 0.8                  |
 | India        | 0.7                  |
 
-![Boxplot of Counts](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-counts.png)
-
 The ten countries with the highest percentage of quality articles.
 
 | country                  | percent_quality |
@@ -135,9 +135,10 @@ And the least quality.
 | Peru         | 0.003           |
 | Tanzania     | 0.002           |
 
-![Boxplot of Quality](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-quality.png)
+The most suprising thing to me was the quality of articles. We see that North Korea has only 1.5 articles per million people but of those articles, they have high percentage of good quality. I don't know who wrote these articles. Maybe the reason for such a high percentage is because the originating authors are from western sources  or this is a result of North Korean governance. The ten lowest quality do not necessarily suprise me. These are countries are neither English speaking or known to have great public education systems that would lead to high quality articles being written. The tables alone don't give a general perspective of how far outlying some of these data are. I would expect, with no bias, a more symmetric distribution. These, however, are incredibly right skewed. See the static visualizations below.
 
-The most suprising thing to me was the quality of articles. We see that North Korea has only 1.5 articles per million people but of those articles, they have high percentage of good quality. I don't know who wrote these articles. Maybe the reason for such a high percentage is because the originating authors are from western sources  or this is a result of North Korean governance. The ten lowest quality do not necessarily suprise me. These are countries are neither English speaking or known to have great public education systems that would lead to high quality articles being written. The tables alone don't give a general perspective of how far outlying some of these data are. I would expect, with no bias, a more symmetric distribution. These, however, are incredibly right skewed. See the static visualization below, or click the interactive plot for hover events.
+![Boxplot of Counts](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-counts.png)
+![Boxplot of Quality](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-quality.png)
 
 ### Future Work
 The analysis in this notebook leads to several more questions in regards to the where this bias comes from. Obviously a strong bias exists. Joining this dataset with the world indicators could bring to light more meaningful insights into the problem.

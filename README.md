@@ -4,14 +4,11 @@ Name: Luke Waninger
 Date: 24 October 2016
 
 ## Goal
-> The goal of this assignment is to explore the concept of bias through data on Wikipedia articles - specifically, articles on political figures from a variety of countries. 
-In the analysis portion of the notebook I will show two major items:
-> 1. The countries with the greatest and least coverage of politicians on Wikipedia compared to their population.
-> 2. The countries with the highest and lowest proportion of high quality articles about politicians.
+Throughout this assignment I will explore an existing bias in the Wikipedia dataset. Specifically, the bias in terms of politician coverage through number and quality of the articles in relation to their home countries population. We will gather the data from two sources: one will be our source for population data and the other contains the relevant article metadata. For each article, we will query a machine learning service to estimate the quality of the article. And finally, we will generate a few tables and visualizations to display the bias.
 [HCDE Fall 2018 - A2](https://wiki.communitydata.cc/Human_Centered_Data_Science_(Fall_2018)/Assignments#A2:_Bias_in_data)
 
 ## Data sources used
-To create these tables, we will draw from two data sources:
+To create the tables and visualizations we will draw from two datasources:
 1. Wikipedia Article Data found on [Figshare](https://figshare.com/articles/Untitled_Item/5513449).
 
 | field   | data type | description                    |
@@ -39,6 +36,7 @@ The following Python packages were used and their documentation can be found at 
 * [`json`](https://docs.python.org/3/library/json.html)
 * [`multiprocessing`](https://docs.python.org/2/library/multiprocessing.html)
 * [`requests`](http://docs.python-requests.org/en/master/)
+* [`ipycache`](https://github.com/rossant/ipycache) - must be installed via the most recent GitHub content. `pip install git+https://github.com/rossant/ipycache.git`
 * [`IPython`](https://ipython.org/documentation.html)
 * [`numpy`](https://docs.scipy.org/doc/)
 * [`pandas`](https://pandas.pydata.org/)
@@ -67,11 +65,6 @@ This notebook creates 1 CSV file of data extracted and compiled as part of this 
 | revision_id | int | the revision id referenced for when quering ORES for article quality prediction |
 | article_quality | str | the predicted quality of article |
 | population | int | population count in millions of people |
-
-### Provenance
-_[See the graph](https://www.synapse.org/#!Synapse:syn17015603)_
-
-![Provenance Graph](https://github.com/lukeWaninger/DATA512_A2/blob/master/provenance.png)
 
 ## License
 This assignment code is released under the MIT license.
@@ -110,6 +103,8 @@ And the ten with the least.
 | Indonesia    | 0.8                  |
 | India        | 0.7                  |
 
+![Boxplot of Counts](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-counts.png)
+
 The ten countries with the highest percentage of quality articles.
 
 | country                  | percent_quality |
@@ -140,12 +135,9 @@ And the least quality.
 | Peru         | 0.003           |
 | Tanzania     | 0.002           |
 
-The most suprising thing to me was the quality of articles. We see that North Korea has only 1.5 articles per million people but of those articles, they have high percentage of good quality. I don't know who wrote these articles. Maybe the reason for such a high percentage is because the originating authors are from western sources  or this is a result of North Korean governance. The ten lowest quality do not necessarily suprise me. These are countries are neither English speaking or known to have great public education systems that would lead to high quality articles being written. The tables alone don't give a general perspective of how far outlying some of these data are. I would expect, with no bias, a more symmetric distribution. These, however, are incredibly right skewed. See the static visualization below, or click the interactive plot for hover events.
+![Boxplot of Quality](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-a2-quality.png)
 
-_[See the interactive plot](https://plot.ly/~waninger/5/)_  
-  
-![Final Visualization](https://github.com/lukeWaninger/hcds-a2-bias/blob/master/hcds-ad-bias.png)
+The most suprising thing to me was the quality of articles. We see that North Korea has only 1.5 articles per million people but of those articles, they have high percentage of good quality. I don't know who wrote these articles. Maybe the reason for such a high percentage is because the originating authors are from western sources  or this is a result of North Korean governance. The ten lowest quality do not necessarily suprise me. These are countries are neither English speaking or known to have great public education systems that would lead to high quality articles being written. The tables alone don't give a general perspective of how far outlying some of these data are. I would expect, with no bias, a more symmetric distribution. These, however, are incredibly right skewed. See the static visualization below, or click the interactive plot for hover events.
 
 ### Future Work
 The analysis in this notebook leads to several more questions in regards to the where this bias comes from. Obviously a strong bias exists. Joining this dataset with the world indicators could bring to light more meaningful insights into the problem.
-
